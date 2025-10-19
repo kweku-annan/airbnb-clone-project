@@ -105,3 +105,105 @@ It’s used for writing project files like `README.md`, `API docs`, and architec
 
 > 💡 **Note:**  
 > Together, these technologies enable developers to design a secure, modular, and maintainable backend system that mirrors real-world software engineering standards.
+
+## 🗄️ Database Design
+
+The **StayBackend** project uses a **relational database model** to structure and manage data efficiently.  
+The design reflects the core functionalities of a booking platform, focusing on data integrity, scalability, and clear relationships between entities.
+
+### 🧑‍🤝‍🧑 Users
+Represents individuals using the platform, either as guests or hosts.
+
+**Key Fields:**
+- `id`: Unique identifier for each user.  
+- `username`: The user’s chosen display name.  
+- `email`: Contact information for login and notifications.  
+- `password_hash`: Encrypted password for security.  
+- `role`: Defines whether the user is a guest or host.
+
+**Relationships:**
+- A **User** can list multiple **Properties** (if they are a host).  
+- A **User** can make multiple **Bookings** (if they are a guest).  
+- A **User** can leave multiple **Reviews**.
+
+---
+
+### 🏠 Properties
+Represents the listings available for booking on the platform.
+
+**Key Fields:**
+- `id`: Unique identifier for each property.  
+- `host_id`: References the **User** who owns the property.  
+- `title`: Name or headline of the listing.  
+- `description`: Detailed information about the property.  
+- `price_per_night`: Cost of booking per night.
+
+**Relationships:**
+- A **Property** belongs to one **User** (host).  
+- A **Property** can have multiple **Bookings**.  
+- A **Property** can receive multiple **Reviews**.
+
+---
+
+### 📅 Bookings
+Represents reservations made by guests for specific properties.
+
+**Key Fields:**
+- `id`: Unique identifier for each booking.  
+- `user_id`: References the **User** (guest) making the booking.  
+- `property_id`: References the **Property** being booked.  
+- `check_in_date`: Start date of the booking.  
+- `check_out_date`: End date of the booking.
+
+**Relationships:**
+- A **Booking** belongs to one **User** (guest).  
+- A **Booking** belongs to one **Property**.  
+- A **Booking** may be linked to one **Payment** record.
+
+---
+
+### 💳 Payments
+Tracks all financial transactions related to bookings.
+
+**Key Fields:**
+- `id`: Unique identifier for each payment.  
+- `booking_id`: References the related **Booking**.  
+- `amount`: Total payment amount.  
+- `payment_method`: e.g., credit card, PayPal, etc.  
+- `status`: Indicates whether the payment was successful or pending.
+
+**Relationships:**
+- A **Payment** belongs to one **Booking**.  
+- Each **Booking** has one **Payment** record.
+
+---
+
+### ⭐ Reviews
+Contains user feedback and ratings for properties they have stayed in.
+
+**Key Fields:**
+- `id`: Unique identifier for each review.  
+- `user_id`: References the **User** who wrote the review.  
+- `property_id`: References the **Property** being reviewed.  
+- `rating`: Numeric rating (e.g., 1–5).  
+- `comment`: Textual feedback about the stay.
+
+**Relationships:**
+- A **Review** belongs to one **User**.  
+- A **Review** belongs to one **Property**.  
+- A **Property** can have many **Reviews**.
+
+---
+
+### 🔗 Entity Relationships Overview
+
+- A **User** can host many **Properties**.  
+- A **User** can make many **Bookings**.  
+- A **Property** can have many **Bookings** and **Reviews**.  
+- A **Booking** is linked to one **Property**, one **User**, and one **Payment**.  
+- A **Review** is linked to one **Property** and one **User**.
+
+---
+
+> 💡 **Note:**  
+> This relational design ensures data consistency and supports efficient querying for common operations such as retrieving available listings, user reviews, or booking histories.
