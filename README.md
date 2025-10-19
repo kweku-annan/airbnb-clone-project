@@ -343,3 +343,39 @@ Securing payments protects both guests and hosts from fraudulent activity and fi
 > 🛡️ **In Summary:**  
 > The security architecture in **StayBackend** ensures **confidentiality**, **integrity**, and **availability** — the three pillars of information security.  
 > Through strong authentication, authorization, encryption, and monitoring practices, the project aligns with industry-grade security standards.
+
+## 🚀 CI/CD Pipeline
+
+### 🧩 What is CI/CD?
+**CI/CD (Continuous Integration and Continuous Deployment)** is a software development practice that automates the process of building, testing, and deploying applications.  
+It ensures that every change in the codebase is **automatically integrated, tested, and deployed**, reducing manual intervention and minimizing human error.
+
+### ⚙️ Why It’s Important
+Implementing a CI/CD pipeline in the **StayBackend: Airbnb Clone Project** helps the development team maintain high code quality, consistency, and delivery speed.  
+It allows for:
+- **Early detection of bugs** through automated testing.  
+- **Faster deployment cycles**, ensuring new features reach users quickly.  
+- **Reliable integration** between team members’ code contributions.  
+- **Consistent environments** using containerization and automation tools.
+
+### 🧰 Tools Used
+The project leverages modern DevOps tools to implement an efficient CI/CD workflow:
+
+| Tool | Purpose |
+|------|----------|
+| **GitHub Actions** | Automates build, test, and deployment workflows directly from the GitHub repository. |
+| **Docker** | Ensures consistent runtime environments across development, testing, and production stages. |
+| **Git** | Enables version control and collaboration, integrating seamlessly with CI/CD pipelines. |
+| **Testing Frameworks (e.g., Pytest)** | Runs automated unit and integration tests as part of the CI process to validate code functionality. |
+
+### 🔄 CI/CD Workflow Overview
+1. **Code Commit:** Developers push updates to the GitHub repository.  
+2. **Build Trigger:** GitHub Actions automatically triggers a workflow.  
+3. **Automated Testing:** The pipeline runs tests to ensure that new code does not break existing functionality.  
+4. **Containerization:** Docker builds and packages the application for deployment.  
+5. **Deployment:** Successfully tested builds are deployed to a staging or production environment.
+
+---
+
+> 💡 **Note:**  
+> The CI/CD pipeline is vital for maintaining **efficiency**, **reliability**, and **scalability** in backend development — enabling continuous improvement while minimizing downtime and deployment errors.
