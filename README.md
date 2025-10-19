@@ -262,3 +262,84 @@ This feature ensures that new updates are integrated smoothly and deployed effic
 
 > 💡 **Note:**  
 > Each of these features works together to deliver a complete, production-grade backend system — emphasizing scalability, maintainability, and team-based collaboration.
+
+## 🔐 API Security
+
+Security is a foundational aspect of the **StayBackend: Airbnb Clone Project**.  
+Since the platform manages sensitive user data, payments, and property information, it is essential to implement robust security measures that protect against unauthorized access, data breaches, and malicious activities.  
+Below are the key security practices integrated into the project.
+
+---
+
+### 🪪 Authentication
+**Description:**  
+Implements **secure user authentication** using token-based systems such as **JWT (JSON Web Tokens)** or OAuth2.  
+This ensures that only verified users can access protected resources and perform specific actions like creating bookings or managing properties.
+
+**Why It’s Important:**  
+Authentication safeguards user accounts, prevents impersonation, and ensures that all system interactions are traceable to verified identities.
+
+---
+
+### 🔏 Authorization
+**Description:**  
+Defines and enforces **role-based access control (RBAC)** to distinguish between user roles such as guests, hosts, and administrators.  
+This ensures that users can only perform actions permitted by their role (e.g., a guest cannot modify another user’s property listing).
+
+**Why It’s Important:**  
+Authorization maintains data integrity and prevents unauthorized manipulation or exposure of sensitive data.
+
+---
+
+### ⚙️ Input Validation and Sanitization
+**Description:**  
+Validates and sanitizes all input data from users and external requests before processing.  
+This helps mitigate attacks such as **SQL injection**, **cross-site scripting (XSS)**, and **command injection**.
+
+**Why It’s Important:**  
+Input validation protects the system from data corruption and security vulnerabilities that exploit unvalidated inputs.
+
+---
+
+### 🚦 Rate Limiting and Throttling
+**Description:**  
+Implements **rate limiting** to restrict the number of API requests a user or IP address can make within a certain timeframe.  
+This prevents **DDoS (Distributed Denial-of-Service)** and **brute-force** attacks on login endpoints or sensitive API routes.
+
+**Why It’s Important:**  
+Rate limiting ensures system stability, prevents abuse, and maintains availability for legitimate users.
+
+---
+
+### 🧩 Data Encryption
+**Description:**  
+Sensitive data such as passwords, payment information, and tokens are **encrypted** in storage and during transmission using protocols like **HTTPS/TLS** and hashing algorithms such as **bcrypt**.
+
+**Why It’s Important:**  
+Encryption ensures that even if data is intercepted or compromised, it remains unreadable and unusable to unauthorized parties.
+
+---
+
+### 🧱 Secure API Endpoints
+**Description:**  
+All API endpoints are protected through **authentication middleware**, **CORS (Cross-Origin Resource Sharing)** configurations, and **HTTPS-only connections**.  
+This minimizes exposure to unauthorized third-party requests and man-in-the-middle attacks.
+
+**Why It’s Important:**  
+Protecting API endpoints maintains system confidentiality and prevents misuse of publicly exposed routes.
+
+---
+
+### 💳 Payment Security
+**Description:**  
+Integrates with secure and compliant payment gateways that support **PCI DSS** standards.  
+Payment transactions are verified and logged to prevent fraud and ensure transparency.
+
+**Why It’s Important:**  
+Securing payments protects both guests and hosts from fraudulent activity and financial data theft.
+
+---
+
+> 🛡️ **In Summary:**  
+> The security architecture in **StayBackend** ensures **confidentiality**, **integrity**, and **availability** — the three pillars of information security.  
+> Through strong authentication, authorization, encryption, and monitoring practices, the project aligns with industry-grade security standards.
