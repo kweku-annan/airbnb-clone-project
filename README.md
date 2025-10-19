@@ -68,3 +68,40 @@ They ensure that every component of the system is clearly documented for ease of
 > 💡 **Note:**  
 > Effective collaboration between these roles ensures that the StayBackend project remains modular, secure, and scalable — mirroring the standards of industry-grade software development.
 
+## 🧰 Technology Stack
+
+The **StayBackend: The Airbnb Clone Project** integrates a modern and scalable set of technologies to build a secure, high-performance backend system.  
+Each tool and framework in this stack plays a crucial role in the project’s architecture and development workflow.
+
+### 🐍 Django
+A high-level **Python web framework** used to build and manage the backend logic of the application.  
+Django simplifies **API development**, **user authentication**, and **database interactions**, enabling rapid and secure application development.
+
+### 🐘 PostgreSQL
+A **powerful open-source relational database system** that stores and manages application data efficiently.  
+It ensures **data consistency**, **reliability**, and supports **complex queries** for user profiles, bookings, and property management.
+
+### 🔗 GraphQL
+A flexible **query language for APIs** that allows clients to request only the data they need.  
+It enhances performance and reduces over-fetching, enabling efficient communication between the frontend and backend services.
+
+### 🐳 Docker
+A **containerization platform** that packages the application and its dependencies into isolated environments.  
+This ensures consistent performance across development, testing, and production environments.
+
+### 💻 Git & GitHub
+Used for **version control** and **collaborative development**.  
+GitHub facilitates **branch management**, **code reviews**, and **team collaboration**, promoting best practices in software versioning.
+
+### ⚙️ GitHub Actions
+A **CI/CD automation tool** integrated within GitHub.  
+It automates testing, building, and deployment processes to ensure **continuous integration** and **continuous delivery**.
+
+### 🧑‍💻 Markdown
+A lightweight **markup language** used for creating clean, readable documentation.  
+It’s used for writing project files like `README.md`, `API docs`, and architecture explanations.
+
+---
+
+> 💡 **Note:**  
+> Together, these technologies enable developers to design a secure, modular, and maintainable backend system that mirrors real-world software engineering standards.
